@@ -1,161 +1,241 @@
- Netflix_Titles-project
+# 🛒 Superstore Sales Analysis & Exploratory Data Analysis (EDA)
 
+## 📌 Project Overview
 
+This project performs a comprehensive Exploratory Data Analysis (EDA) on the Superstore dataset to uncover valuable business insights related to sales, profit, customer behavior, product performance, and regional trends.
 
-## Project Overview
-
-This project performs an in-depth Exploratory Data Analysis (EDA) on the Netflix Titles dataset to uncover patterns, trends, and insights related to content distribution, release years, genres, countries, ratings, and content growth over time.
-
-The analysis includes data cleaning, missing value treatment, feature engineering, univariate analysis, bivariate analysis, and multivariate analysis to better understand Netflix's content strategy.
+The analysis includes data cleaning, statistical analysis, visualization, trend analysis, and business recommendations to support data-driven decision making.
 
 ---
 
-## Objectives
+## 🎯 Business Objectives
 
-* Analyze Netflix content distribution.
-* Identify trends in content additions over time.
-* Explore relationships between content type, genre, duration, and release year.
-* Understand country-wise content contribution.
-* Generate actionable insights through data visualization.
-
----
-
-## Dataset Information
-
-**Dataset Name:** Netflix Titles Dataset
-
-**Source:** Kaggle
-
-The dataset contains information about Netflix Movies and TV Shows including:
-
-* Show ID
-* Type (Movie / TV Show)
-* Title
-* Director
-* Cast
-* Country
-* Date Added
-* Release Year
-* Rating
-* Duration
-* Genre
-* Description
+- Analyze sales and profit performance
+- Identify top-performing product categories
+- Understand customer segment behavior
+- Evaluate regional sales and profitability
+- Study the impact of discounts on profit
+- Discover seasonal and yearly business trends
+- Generate actionable business recommendations
 
 ---
 
-## Data Cleaning
+## 📂 Dataset Information
+
+The dataset contains retail transaction records including:
+
+- Orders
+- Customers
+- Products
+- Categories & Sub-Categories
+- Sales
+- Profit
+- Quantity
+- Discount
+- Region
+- Order Date
+
+Total Records: **9,994**
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+---
+
+## 🧹 Data Cleaning & Preprocessing
 
 The following preprocessing steps were performed:
 
-* Handled missing values in:
+✔ Missing Value Check
 
-  * Director
-  * Cast
-  * Country
-  * Duration
-* Removed data inconsistencies where necessary.
-* Converted date columns into appropriate datetime format.
-* Verified data quality through missing value analysis.
+✔ Duplicate Value Check
 
----
+✔ Data Type Validation
 
-## Feature Engineering
+✔ Date Conversion
 
-New features were created to improve analysis:
-
-| Feature         | Description                                    |
-| --------------- | ---------------------------------------------- |
-| year_added      | Year content was added to Netflix              |
-| content_age     | Difference between Year Added and Release Year |
-| main_genre      | Primary genre extracted from listed categories |
-| primary_country | Primary country extracted from country column  |
-| duration_num    | Numeric duration extracted from duration       |
-| genre_count     | Number of genres assigned to a title           |
+✔ Statistical Summary Analysis
 
 ---
 
-## Exploratory Data Analysis
+## 📊 Exploratory Data Analysis
 
-### Univariate Analysis
+### 1️⃣ Univariate Analysis
 
-Analyzed individual variables such as:
+Performed analysis on:
 
-* Content Type Distribution
-* Release Year Distribution
-* Duration Distribution
-* Genre Distribution
-* Country Distribution
+- Sales Distribution
+- Profit Distribution
+- Category Distribution
+- Segment Distribution
+- Sales Outliers
+- Sub-Category Distribution
 
-### Bivariate Analysis
+### Key Findings
 
-Studied relationships between:
-
-* Type vs Genre
-* Type vs Rating
-* Type vs Duration
-* Year Added vs Type
-* Release Year vs Content Age
-
-### Multivariate Analysis
-
-Performed:
-
-* Correlation Analysis
-* Genre vs Duration vs Type Analysis
-* Release Year vs Duration vs Type Analysis
+- Sales distribution is highly right-skewed.
+- Most orders generate relatively low sales.
+- Few transactions contribute significantly to revenue.
+- Profit contains both positive and negative values.
+- Customer demand is concentrated in selected categories and products.
+- Significant sales outliers exist.
 
 ---
 
-## Key Insights
+### 2️⃣ Bivariate Analysis
 
-* Netflix's catalog is dominated by recently released content.
-* Most content was added between 2018 and 2021.
-* Movies represent a significant portion of the platform's library.
-* Most titles are added shortly after their original release.
-* Multi-genre classification is common across content.
-* Content duration varies substantially across titles.
-* Release Year and Content Age show a strong inverse relationship.
-* Netflix maintains a diverse mix of modern and classic content.
-* Genre diversity remains largely independent of content duration.
-* The dataset contains very few missing values and exhibits strong overall data quality.
+Performed analysis between:
 
----
+- Sales vs Category
+- Profit vs Category
+- Sales vs Region
+- Profit vs Region
+- Discount vs Profit
 
-## Technologies Used
+### Key Findings
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Jupyter Notebook
+- Sales contribution varies significantly across categories.
+- High sales do not always generate high profits.
+- Regional performance differs considerably.
+- Strong negative relationship observed between Discount and Profit.
+- Excessive discounting reduces profitability.
 
 ---
 
-## Visualizations
+### 3️⃣ Multivariate Analysis
 
-Key visualizations included:
+Techniques Used:
 
-* Content Type Distribution
-* Content Added Over Time
-* Top Genres
-* Top Countries
-* Release Year Distribution
-* Type vs Genre Analysis
-* Type vs Rating Analysis
-* Correlation Heatmap
-* Multivariate Scatter and Box Plots
+- Correlation Heatmap
+- Pairplot Analysis
+- Sales-Profit-Category Relationships
 
----
+### Key Findings
 
-## Conclusion
-
-The analysis reveals that Netflix primarily focuses on recently released content while maintaining a diverse and globally distributed content library. Movies dominate the catalog, and the platform experienced significant growth between 2018 and 2021. The findings provide valuable insights into Netflix's content acquisition and distribution strategy.
+- Discount negatively impacts profit.
+- Sales and profit relationships vary across categories.
+- Correlation analysis reveals important business patterns.
+- Outliers influence overall performance metrics.
 
 ---
 
-## Author
+## 📈 Trend Analysis
+
+### Yearly Sales Trend
+
+- Sales show overall business growth.
+- Customer demand increased over time.
+- Long-term sales performance improved consistently.
+
+### Monthly Sales Trend
+
+- Monthly sales fluctuate significantly.
+- Certain months generate higher revenue.
+- Seasonal purchasing behavior is visible.
+
+### Seasonal Sales Analysis
+
+🥇 Fall Season recorded the highest sales.
+
+🥈 Summer followed closely behind.
+
+📉 Spring generated comparatively lower sales.
+
+---
+
+### Yearly Profit Trend
+
+- Profit increased over the years.
+- 2017 recorded the highest profit.
+- Business profitability improved steadily.
+
+### Monthly Profit Trend
+
+- December recorded the highest profit.
+- January showed comparatively lower profitability.
+- Year-end demand positively impacted earnings.
+
+### Quarterly Analysis
+
+🏆 Q4 generated the highest sales and profit.
+
+📉 Q1 showed relatively lower business performance.
+
+---
+
+## 🔍 Key Business Insights
+
+- Revenue is concentrated among a limited number of high-value orders.
+- Product categories contribute differently to sales and profit.
+- Discounts have a significant negative impact on profitability.
+- Regional performance varies across markets.
+- Seasonal demand strongly influences revenue generation.
+- Q4 is the most profitable period for the business.
+
+---
+
+## 💡 Recommendations
+
+### Pricing Strategy
+- Reduce excessive discounting.
+- Optimize promotional campaigns.
+
+### Inventory Management
+- Increase inventory for high-performing products.
+- Monitor low-demand categories.
+
+### Regional Growth
+- Invest more in high-performing regions.
+- Develop strategies for underperforming regions.
+
+### Seasonal Planning
+- Prepare inventory ahead of Q4 demand spikes.
+- Launch targeted campaigns during peak seasons.
+
+### Profit Optimization
+- Focus on high-margin products.
+- Improve profitability tracking across categories.
+
+---
+
+## 📷 Project Visualizations
+
+This project includes:
+
+- Histograms
+- Boxplots
+- Countplots
+- Bar Charts
+- Correlation Heatmaps
+- Pairplots
+- Trend Line Charts
+- Seasonal Analysis Charts
+
+---
+
+## 📚 Skills Demonstrated
+
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Data Visualization
+- Statistical Analysis
+- Business Intelligence
+- Trend Analysis
+- Insight Generation
+
+---
+
+## 👩‍💻 Author
 
 **Aarti Bisht**
 
- | Python | Pandas | Data Visualization | Exploratory Data Analysis
+Aspiring Data Scientist | Data Analyst | AI Enthusiast
+
