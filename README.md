@@ -1,147 +1,127 @@
-# Superstore Sales & Profit Analysis (EDA Project)
+ Netflix_Titles-project
+
+
 
 ## Project Overview
 
-This project presents an Exploratory Data Analysis (EDA) of the Superstore dataset to uncover business insights related to sales performance, profitability, product performance, customer purchasing patterns, and seasonal trends.
+This project performs an in-depth Exploratory Data Analysis (EDA) on the Netflix Titles dataset to uncover patterns, trends, and insights related to content distribution, release years, genres, countries, ratings, and content growth over time.
 
-The analysis aims to identify key drivers of revenue and profit, detect loss-making areas, and provide actionable business recommendations for decision-making.
+The analysis includes data cleaning, missing value treatment, feature engineering, univariate analysis, bivariate analysis, and multivariate analysis to better understand Netflix's content strategy.
 
 ---
 
 ## Objectives
 
-* Understand overall sales and profit performance.
-* Identify profitable and loss-making products.
-* Analyze sales and profit trends over time.
-* Explore category and sub-category performance.
-* Study seasonal and quarterly business patterns.
-* Generate business recommendations based on data-driven insights.
+* Analyze Netflix content distribution.
+* Identify trends in content additions over time.
+* Explore relationships between content type, genre, duration, and release year.
+* Understand country-wise content contribution.
+* Generate actionable insights through data visualization.
 
 ---
 
 ## Dataset Information
 
-The dataset contains information related to:
+**Dataset Name:** Netflix Titles Dataset
 
-* Orders
-* Sales
-* Profit
-* Products
-* Categories and Sub-Categories
-* Customer Segments
-* Regions
-* Order Dates
-* Shipping Details
+**Source:** Kaggle
+
+The dataset contains information about Netflix Movies and TV Shows including:
+
+* Show ID
+* Type (Movie / TV Show)
+* Title
+* Director
+* Cast
+* Country
+* Date Added
+* Release Year
+* Rating
+* Duration
+* Genre
+* Description
 
 ---
 
-## Project Workflow
+## Data Cleaning
 
-### 1. Literature Review
+The following preprocessing steps were performed:
 
-A brief study was conducted to understand common retail business KPIs, sales analytics techniques, and profitability analysis approaches.
+* Handled missing values in:
 
-### 2. Data Understanding
+  * Director
+  * Cast
+  * Country
+  * Duration
+* Removed data inconsistencies where necessary.
+* Converted date columns into appropriate datetime format.
+* Verified data quality through missing value analysis.
 
-* Dataset inspection
-* Data types verification
-* Missing value analysis
-* Duplicate value checking
+---
 
-### 3. Descriptive Statistics
+## Feature Engineering
 
-Statistical summary of numerical variables including:
+New features were created to improve analysis:
 
-* Sales
-* Profit
-* Quantity
-* Discount
+| Feature         | Description                                    |
+| --------------- | ---------------------------------------------- |
+| year_added      | Year content was added to Netflix              |
+| content_age     | Difference between Year Added and Release Year |
+| main_genre      | Primary genre extracted from listed categories |
+| primary_country | Primary country extracted from country column  |
+| duration_num    | Numeric duration extracted from duration       |
+| genre_count     | Number of genres assigned to a title           |
 
-### 4. Univariate Analysis
+---
 
-Analysis of individual variables using:
+## Exploratory Data Analysis
 
-* Histograms
-* Distribution plots
-* Count plots
+### Univariate Analysis
 
-### 5. Bivariate Analysis
+Analyzed individual variables such as:
 
-Relationship analysis between variables such as:
+* Content Type Distribution
+* Release Year Distribution
+* Duration Distribution
+* Genre Distribution
+* Country Distribution
 
-* Sales vs Profit
-* Discount vs Profit
-* Category vs Sales
-* Category vs Profit
+### Bivariate Analysis
 
-### 6. Multivariate Analysis
+Studied relationships between:
 
-Investigation of interactions among multiple variables using:
+* Type vs Genre
+* Type vs Rating
+* Type vs Duration
+* Year Added vs Type
+* Release Year vs Content Age
 
-* Correlation analysis
-* Heatmaps
-* Comparative visualizations
+### Multivariate Analysis
 
-### 7. Trend Analysis
+Performed:
 
-#### Monthly Sales Trend
-
-Identified month-wise sales fluctuations and peak business periods.
-
-#### Monthly Profit Trend
-
-Evaluated monthly profitability performance.
-
-#### Yearly Sales Trend
-
-Analyzed long-term sales growth patterns.
-
-#### Yearly Profit Trend
-
-Examined profit performance across years.
-
-### 8. Seasonal Analysis
-
-#### Quarterly Sales Analysis
-
-Studied sales performance across quarters.
-
-#### Quarterly Profit Analysis
-
-Identified seasonal profit patterns and business cycles.
-
-### 9. Product Performance Analysis
-
-#### Top 10 Profitable Products
-
-Identified products contributing the highest profits.
-
-#### Top 10 Loss-Making Products
-
-Identified products negatively impacting business profitability.
-
-### 10. Key Findings
-
-Summarized the most important business insights discovered during analysis.
-
-### 11. Business Recommendations
-
-Provided actionable recommendations to improve sales performance and profitability.
+* Correlation Analysis
+* Genre vs Duration vs Type Analysis
+* Release Year vs Duration vs Type Analysis
 
 ---
 
 ## Key Insights
 
-* Technology-related products generated the highest profits.
-* Canon imageCLASS 2200 Advanced Copier emerged as the most profitable product.
-* Certain products generated significant losses and require pricing or discount review.
-* Sales and profit exhibited clear seasonal patterns.
-* Business profitability is concentrated among a small number of high-performing products.
-* Some categories contribute high sales but relatively lower profits.
+* Netflix's catalog is dominated by recently released content.
+* Most content was added between 2018 and 2021.
+* Movies represent a significant portion of the platform's library.
+* Most titles are added shortly after their original release.
+* Multi-genre classification is common across content.
+* Content duration varies substantially across titles.
+* Release Year and Content Age show a strong inverse relationship.
+* Netflix maintains a diverse mix of modern and classic content.
+* Genre diversity remains largely independent of content duration.
+* The dataset contains very few missing values and exhibits strong overall data quality.
 
 ---
 
-## Tools & Technologies Used
+## Technologies Used
 
 * Python
 * Pandas
@@ -152,20 +132,30 @@ Provided actionable recommendations to improve sales performance and profitabili
 
 ---
 
-## Business Recommendations
+## Visualizations
 
-1. Focus marketing efforts on high-profit products.
-2. Review pricing and discount strategies for loss-making products.
-3. Optimize inventory for top-performing products.
-4. Monitor seasonal demand patterns for better planning.
-5. Reduce dependence on consistently unprofitable products.
+Key visualizations included:
+
+* Content Type Distribution
+* Content Added Over Time
+* Top Genres
+* Top Countries
+* Release Year Distribution
+* Type vs Genre Analysis
+* Type vs Rating Analysis
+* Correlation Heatmap
+* Multivariate Scatter and Box Plots
 
 ---
 
 ## Conclusion
 
-This analysis demonstrates how exploratory data analysis can transform raw retail data into actionable business insights. The findings help identify growth opportunities, improve profitability, and support data-driven business decisions.
+The analysis reveals that Netflix primarily focuses on recently released content while maintaining a diverse and globally distributed content library. Movies dominate the catalog, and the platform experienced significant growth between 2018 and 2021. The findings provide valuable insights into Netflix's content acquisition and distribution strategy.
 
 ---
 
-**Author:** Aarti Bisht
+## Author
+
+**Aarti Bisht**
+
+ | Python | Pandas | Data Visualization | Exploratory Data Analysis
